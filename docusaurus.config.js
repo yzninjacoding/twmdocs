@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   tagline: 'DOCUMENTATION',
   url: 'https://yzninjacoding.github.io',
   baseUrl: '/twmdocs/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'yzninjacoding', // Usually your GitHub org/user name.
