@@ -1,0 +1,2 @@
+used to deploy
+cmd /C "set GIT_USER=yzninjacoding&& yarn deploy"
