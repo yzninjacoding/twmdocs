@@ -6,13 +6,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'TWM',
   tagline: 'DOCUMENTATION',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://yzninjacoding.github.io',
+  baseUrl: '/twmdocs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'yzninjacoding', // Usually your GitHub org/user name.
+  projectName: 'twmdocs', // Usually your repo name on github.
 
   presets: [
     [
@@ -41,9 +41,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'TWM',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'TWM Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -51,12 +51,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            label: 'Download',
             position: 'right',
           },
         ],
