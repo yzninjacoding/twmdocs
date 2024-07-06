@@ -4,32 +4,25 @@ sidebar_position: 1
 
 # Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+TWM is a trading and market research platform that allows user to trade, perform tests and create their own extendable modules using C# scripting language.
 
-## Getting Started
+## Platform Windows
 
-Get started by **creating a new site**.
+- [Market Data](platform/market-data)
+- [Instruments](platform/instruments)
+- Validator
+- Optimizer
+- Database
+- Connections
+- Options
+- Debug
+- Instruments
+- Instrument Lists
+- Data Series
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Platform Extendable Modules
 
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+- Strategies
+- Indicators
+- Comission
+- Optimization Fitness Coefficients
