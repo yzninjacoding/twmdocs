@@ -4,6 +4,7 @@ sidebar_position: 3
 
 # Options
 
+
 Platform options can be found under `Admin Panel -> Tools -> Options`
 
 import atools from '/img/adminPanelChartTools.png';
