@@ -5,6 +5,7 @@ sidebar_position: 2
 import inst from '/img/instWindow.png';
 import instL from '/img/instL.png';
 import instI from '/img/instrumentsStructure.png';
+import minLotSize from '/img/minLosSize.png';
 
 
 # Instruments
@@ -48,3 +49,11 @@ The instrument lists window is used to create custom user set up instrument list
 **Yellow**  demonstrates all instruments that are available locally and can be added to any list from the blue section. Use the `Add` button below the section to add instument to the selected list.
 
 <img src={instL} alt="Data Series Window" style={{width: 800}} />
+
+### Min Lot Size
+
+When accessing instrument parameters you will see a field called `min lot size` which is very important to understand to place your trades successfully. For example min lot size for BTCUSDT future contract on Binance is 0.001 which means you cannot buy/sell less than that when you trade. Some future contracts also have a `notional` field which means that even if you do use the min lot size when you trade it cannot convert to less than the notional value of the quote asset using the current price. 
+
+For example, if BTCUSDT min lot size is 0.001 and the current price is 59600 the converted value is 59.6 which is less than the notional. As a result an order placed at this value can be ignored. Please check with providers for more information on this issue.
+
+<img src={minLotSize} alt="Data Series Window" style={{width: 400}} />
