@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktwmdocs=self.webpackChunktwmdocs||[]).push([[7703],{1860:s=>{s.exports=JSON.parse('{"allTagsPath":"/twmdocs/blog/tags","slug":"/twmdocs/blog/tags/hola","name":"hola","count":1,"permalink":"/twmdocs/blog/tags/hola"}')}}]);

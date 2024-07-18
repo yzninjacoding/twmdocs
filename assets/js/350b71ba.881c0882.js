@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktwmdocs=self.webpackChunktwmdocs||[]).push([[4434],{3882:s=>{s.exports=JSON.parse('{"allTagsPath":"/twmdocs/blog/tags","slug":"/twmdocs/blog/tags/docusaurus","name":"docusaurus","count":4,"permalink":"/twmdocs/blog/tags/docusaurus"}')}}]);
