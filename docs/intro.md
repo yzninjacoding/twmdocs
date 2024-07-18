@@ -14,12 +14,10 @@ TWM is a trading and market research platform that allows user to trade, perform
 - [Options](platform/options)
 - [Compilation](platform/compilation)
 - [Strategies](platform/strategies)
-- Connections
-- Options
-- Debug
-- Instruments
-- Instrument Lists
-- Data Series
+- [Validator](platform/validator)
+- [Optimizer](platform/optimizer)
+- [Database](platform/database)
+
 
 ## Platform Extendable Modules
 

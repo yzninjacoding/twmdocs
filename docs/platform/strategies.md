@@ -10,7 +10,7 @@ import stratPerf from '/img/stratPerf.png';
 import stratAnalysis from '/img/stratAnalysis.png';
 import trades from '/img/trades.png';
 
-The platform allows few ways where user is able to execute strategies including executing strategies inside the Validator, Chart and Optimizer. Each section has its own specifics. Please refer to each section in particular for more details.
+The platform allows few ways where user is able to execute strategies including executing strategies inside the [Validator](validator), Chart and Optimizer. Each section has its own specifics. Please refer to each section in particular for more details.
 
 ### Executing Strategies on Chart
 
