@@ -62,3 +62,7 @@ Please use mouse rigth click on root folder name in file tree to view the contex
 ### Other Data Calls
 
 Additionaly data can be sourced by TWM when using specific sections such as validator and optimizer. Please adress these sections for more information on when and under what circumstances data will be sourced from server whilst using these sections of TWM.
+
+### Important Information
+
+- Please note that data can take a long time to load. Especially first time you call for it and on a slow internet connection. It can take up to 10 min to load 1 min data for an instrument. You will however see a progress label changing on the pop up announcing how many days have been already downloaded. Please be patient and do not interupt the process. If you abort, no data will be saved.
