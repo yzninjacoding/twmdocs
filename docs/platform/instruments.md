@@ -15,7 +15,7 @@ import minLotSize from '/img/minLosSize.png';
 TWM locally stores instruments in its own database. Users need to combine these instruments into their custom instrument lists however before that, these instruments need to be downlaoded from their respective providers. Below is an illustration of how it works.
 
 
-<img src={instI} alt="Data Series Window" style={{width: 450}} />
+<img src={instI} alt="Data Series Window" style={{width: 400}} />
 
 The above process has 2 steps.
 - Step 1 connect to the required provider and download the desired instrument using the `Instruments` window.
@@ -40,9 +40,9 @@ On the right hand side user is able to locate available instruments to be downlo
 
 ### Instrument Lists
 
-The instrument lists window is used to create custom user set up instrument lists. TWM comes with _Default_ instrument list that cannot be deleted. The window is subdivided into 3 sections.
+The instrument lists window is used to create custom user instrument lists. TWM comes with _Default_ instrument lists that cannot be deleted. The window is subdivided into 3 sections.
 
-**Blue** is used to show created instrument lists. Use the `Add` `Remove` buttons at the bottom below the section to add and remove custom instrument lists. When creating an instrument list it has to be assigned to a specific connection, cross connection instrument lists are not supported.
+**Blue** is used to show created instrument lists. Use the `Add` `Remove` buttons at the bottom below the section to add and remove custom instrument lists. When creating an instrument list it has to be assigned to a specific connection and instrument type, cross connection and cross type lists are not supported.
 
 **Red**  is used to show the instruments that have been added to a specificly selected list from the local instruments database. Use the `Remove` button below the section to remove the instument from the selected list.
 

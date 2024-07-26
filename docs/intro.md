@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Introduction
 
-TWM is a trading and market research platform that allows user to trade, perform tests and create their own extendable modules using C# scripting language.
+TWM is a trading and market research platform that allows user to trade, perform tests and create their own extendable modules using C# scripting language and extensive UI capabilities.
 
 ## Platform Windows
 
@@ -17,6 +17,7 @@ TWM is a trading and market research platform that allows user to trade, perform
 - [Validator](platform/validator)
 - [Optimizer](platform/optimizer)
 - [Database](platform/database)
+- [Chart Trader](platform/charttrader)
 
 
 ## Platform Extendable Modules

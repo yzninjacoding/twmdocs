@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Market Data
 
-Internet connection is required to get **new** market data. If market data has already been downloaded, user is able to perform tests using the stored market data which will be sourced from `C:\Users\User\Documents\Twm\DB\HistoricalData\` folder. Each provider is assigned to a folder and if the provider has a testnet and mainet data it will sorted inside the folder to their respective paths as well as spot and instrument types.
+Internet connection is required to get **new** market data. If market data has already been downloaded, user is able to perform tests using the stored market data which will be sourced from `C:\Users\User\Documents\Twm\DB\HistoricalData\` folder. Each provider is assigned to a folder and if the provider has a testnet and mainet data it will sorted inside the folder in their respective paths as well as spot and instrument types.
 
 In order to download new market data a connection has to be set up to the appropriate provider. Please address the connection section on more information about setting up [connections](connections).
 
@@ -66,3 +66,4 @@ Additionaly data can be sourced by TWM when using specific sections such as vali
 ### Important Information
 
 - Please note that data can take a long time to load. Especially first time you call for it and on a slow internet connection. It can take up to 10 min to load 1 min data for an instrument. You will however see a progress label changing on the pop up announcing how many days have been already downloaded. Please be patient and do not interupt the process. If you abort, no data will be saved.
+- When something like the above mentioned takes place, ie. data gets loaded for 1 or more minutes you will see slight discrepancies between the first live bar and the last historical bar because whilst the data was loading the newly formed bars were not getting formed. This can be easily fixed by closing the chart and loading data again.
