@@ -41,7 +41,9 @@ In order to set up a mainnet API key you will need to log into your account and 
 
 Copy the API key and secret from Binance API page to TWM connection set up parameters. Make sure you have provided the correct permissions for the API key. The minimum required permissions to trade spot and derivatives markets are `Enable Spot & Margin Trading` and `Enable Futures` for trading futures. 
 
-It is highly recomended to restrict access to your trusted IP. You can see what you IP is here https://whatismyipaddress.com/. Make sure you are not using dynamic IP that can change a few times even during a single day.
+It is highly recomended to restrict access to your trusted IP. You can see what you IP is here https://whatismyipaddress.com/. Make sure you are not using dynamic IP that can change a few times even during a single day. 
+
+If you have set up a conection and after sometime you are not able to log in for some reason, please go to the above mentioned address and re-identify your IP to check whether it has changed or not. If it has changed, it means you have a dynamic IP and you might need to update it within the exchange restrictions regularly. 
 
 #### Testnet
 
@@ -60,6 +62,8 @@ Bybit connection is available with two environments - testnet and mainnet. For m
 #### Mainnet
 
 In order to set up a mainnet API key you will need to log into your account and go to https://www.bybit.com/app/user/api-management which is located under `Account -> API`. Please make sure your Bybit account is configured to use **Unified Trading Account!!!**. Bybit classic account is not supported.
+
+If your Bybit account is not UTA (Unified Trading Account), you will usually see Spot and Derivates separately listed in your Dashboard. After you upgrade they will be merged to a single UTA (Unified Trading Account). On information about how to upgrade to UTA please contact Bybit support. Usually it is a very simple process and takes 2 minutes after you click a respective pop up button Upgrade to UTA somewhere on Bybit interface.
 
 <img src={bybitAPI} alt="Connections Window" style={{width: 600}} />
 
@@ -82,5 +86,7 @@ Please note that **testnet market data is not the same as real market data** you
 - Testnet download speed can be significantly slower.
 - Mainnet download can take a long time especially for fast timeframes like 1 min.
 - TWM will attempt to download all available data the first time you ask for data, stay patient and wait untill the process is over, if you terminate all downloaded data will be lost and you will have to start over.
+- Upon creating the keys the system might ask you whether you would like system generated API keys or self generated API keys. It does not matter for TWM which ones you choose. You can read more about what the difference between them is upon creation in the information provided by the exchange.
+- Upon API key creation do not forget to create a name for it, it does not matter for TWM what name you create, just a name that you can identify for your personal use. Some exchanges might not allow you to proceed without the name, watch out for hints from the exchange UI that can help you identify what is required to be filled in.
 
 
