@@ -43,7 +43,7 @@ To cancel the order press on the cross located on the order line near the chart 
 
 ### Positions & Assets
 
-When trading futures TW opens positions that can be observed on the chart as a line object placed at the position average entry price. The positions are sourced directly from the exchanges. If the position is scaled in or out you can see the average price adjust to a new value. You may also use the `Close` button to close the position completely at any point. You can also close positions by right clicking the position listed in the positions tab in the admin window.
+When trading futures TW opens positions that can be observed on the chart as a line object placed at the position average entry price. The positions are sourced directly from the exchanges. If the position is scaled in or out you can see the average price adjust to a new value. You may also use the `Close` button to close the position completely at any point. You can also close positions by right clicking the position listed in the positions tab in the admin window. If a position is added on the exchange side which does not exist in the local instrument list, TWM will automatically add it to the list.
 
 <img src={ct3} alt="Data Series Window" style={{width: 700}} />
 
@@ -55,7 +55,7 @@ On the other hand when you open a position on the `Futures` side you will see a 
 
 <img src={pos} alt="Data Series Window" style={{width: 700}} />
 
-All tabs allow filtering by connection or instrument type.
+All tabs allow filtering by connection or instrument type. 
 
 ### Overview
 

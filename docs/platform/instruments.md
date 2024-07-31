@@ -38,6 +38,8 @@ On the right hand side user is able to locate available instruments to be downlo
 
 <img src={inst} alt="Data Series Window" style={{width: 800}} />
 
+Upon connection to an exchange some position migh be already open for a particlar instrument. If this instrument has not yet been added locally it will be added automatically by TWM engine in order to reflect its positions correctly in the positions tab.
+
 ### Instrument Lists
 
 The instrument lists window is used to create custom user instrument lists. TWM comes with _Default_ instrument lists that cannot be deleted. The window is subdivided into 3 sections.

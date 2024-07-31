@@ -32,6 +32,21 @@ The parameter defaults should be assigned inside the OnStateChanged event
 public int Period { get; set; }
 ```
 
+In order to be able to control category order `[Category("Category Name")]` tag has to be used. Native categories such as Setup and DataSeries can also be ordered. The category order has to be set above the class name.
+
+```js
+[CategoryOrder(Setup, 0)]
+[CategoryOrder(DataSeries, 1)]
+[CategoryOrder(GlobalSettings, 2)]
+[CategoryOrder(EntrySettings, 6)]
+[CategoryOrder(Filters, 7)]
+[CategoryOrder(ExitSettings, 8)]
+public class DefaultMACrossOver:Strategy
+{
+    
+}
+```
+
 ### Execution
 
 Whenever a strategy or indicator changes state the `OnStateChanged` event takes place. We are able to get the current new state of the object and work with it. Some global parameters such as Name and Version should be set here.
@@ -116,5 +131,6 @@ It is possible to add an additional data series to indicator or strategy and wor
 ```js
 AddDataSeries(DataSeriesType.Hour, 1, "SymbolName");
 ```
+
 
 
