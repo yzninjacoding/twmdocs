@@ -32,8 +32,6 @@ public override void OnStateChanged()
 
 To analyze potential fills during historical execution for `stop-market`, `limit`, and `stop-limit` orders TWM uses an internal BeforeBarUpdate event. The OnBarUpdate event occurs after the BeforeBarUpdate for the same bar index.
 
-#### Order Actions
-
 ```OrderAction.Buy``` - will open a long position, should be used on initial position opening and scaling in
 
 ```OrderAction.Sell``` - will close a long position, , should be used for closing the position or scaling out
@@ -45,7 +43,7 @@ To analyze potential fills during historical execution for `stop-market`, `limit
 
 For live market `OrderAction.Buy` and `OrderAction.BuyToCover` will always buy and `OrderAction.SellShort` and `OrderAction.BuyToCover` will always sell.
 
-#### Market Orders
+### Market Orders
 
 Submitted market orders will get filled immidiatly. During historical execution TWM will use the next bar open value to fill the order.
 
@@ -67,7 +65,7 @@ private void PlaceMarketEntryOrder(bool isLong)
 }
 ```
 
-#### Limit Orders
+### Limit Orders
 
 For limit orders the following Ois true during historical execution.
 
@@ -101,7 +99,7 @@ private void PlaceLimitEntryOrder(bool isLong, double price)
 
 The above example clearly demonstrates where the historical order short fill has been filled with bar open price although its limit order price has been set 50 ticks below the signal bar low.
 
-#### Stop-Market Orders
+### Stop-Market Orders
 
 To understand stop market orders we need to understand the concept of trigger price. Basicaly a stop market order will execute a market order when the market gets to a trigger price. It does not matter where the market is at the moment you place this order. 
 
@@ -158,7 +156,7 @@ On a historical market stop market orders behave differently when a position is 
 - You cannot scale in using this type of order
 - The order can be used for exiting the position only
 
-#### Stop-Limit Orders
+### Stop-Limit Orders
 
 Stop limit order will place a limit order at limit price once the market has reached the trigger price. The limit order itself will work exactly as a standard limit order. Historical execution of stop limit orders is not currently supported. You can use stop limit orders only for live execution and placement on the exchange.
 

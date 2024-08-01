@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Core
 
+import comissions from '/img/comissions.png';
+
 ### Custom Project
 
 TWM allows users to write their own extendable modules using C# language. In this section you will find tutorials and help on main API. TWN is installed together with a `Custom` project file where user is capabale of writing code. You can use any IDE of your choice. In our documentation we will be demonstrating everyhting with the help of Visual Studio Community Edition wich is a free IDE that can be downloaded from [here](https://visualstudio.microsoft.com/downloads/).
@@ -130,7 +132,44 @@ It is possible to add an additional data series to indicator or strategy and wor
 
 ```js
 AddDataSeries(DataSeriesType.Hour, 1, "SymbolName");
+
 ```
 
+### Comissions
+
+Comissions is an extendable TWM module. There are several pre-configured set ups available. The comissions are calculated at the end of each trade and we have a chance to interact with the trade data in order to make extra calculations. The returned comissions value will be deducted from the total pnl of the trade. Below is an example of most popular % based comission calculation. 
+
+```js
+public override double GetCommission(Trade trade)
+{
+    var entry = (trade.ExitQuantity * trade.EntryPrice)*Commission/100;
+    var exit = (trade.ExitQuantity * trade.ExitPrice)*Commission/100;
 
 
+    return entry + exit;
+}
+```
+
+TWM is already preset with spot and futures comissions presets for taker and maker options.
+
+<img src={comissions} alt="comissions" style={{width: 700}} />
+
+
+### Optimization Fitness
+
+You can access and code your own optimization fitness coefficient. Please look for examples in the optimization fitness folder. The optimzer will always try and find the max `Value` parameter that you pass from here. 
+
+```js
+public class MaxProfitFactor : OptimizationFitness
+{
+    private const string OptimizationFitnessName = "Max Profit Factor";
+
+    public override void OnCalculatePerformanceValue(StrategyBase strategy)
+    {
+        Value = strategy.SystemPerformance.Summary.GetValue(AnalyticalFeature.ProfitFactor);
+
+    }
+
+    
+}
+```
