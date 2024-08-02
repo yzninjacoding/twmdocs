@@ -87,6 +87,7 @@ TWM is a trading and market research platform that allows user to trade, perform
     - [Market Orders](code/strategies#market-orders)
     - [Limit Orders](code/strategies#stop-limit-orders)
     - [Stop Market Orders](code/strategies#stop-market-orders)
+    - [Positions](code/strategies#positions)
 - [Misc](code/misc)
     - [Autoscale](code/misc#autoscale)
     - [Debug Window](code/misc#debug-window)

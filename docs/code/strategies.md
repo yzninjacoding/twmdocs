@@ -180,3 +180,19 @@ private void PlaceStopLimitOrder(bool isLong, double price, double triggerPrice)
 }
 ```
 
+### Positions
+
+You can check existing strategy positions using the `LastPosition` command or by looking through the `Positions` collection. Last position will return the last position in the Positions collection. If a position exists and a new trade is made, it will add onto the existing position. Each `Position` consists of `Trades` that are stored inside it. In order to consider a position closed, all trades contained within a Position object have to be closed. If you close more trades than a Positoin object stores crating an overfill, the scipt will open a new Position to the other side.
+
+```js
+if (LastPosition.MarketPosition == MarketPosition.Flat)
+    return;
+
+if (LastPosition.MarketPosition == MarketPosition.Long)
+    return;
+
+if (LastPosition.MarketPosition == MarketPosition.Short)
+    return;
+
+```
+

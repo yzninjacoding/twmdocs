@@ -72,12 +72,16 @@ public override void OnStateChanged()
 }
 ```
 
-All historical and live execution of TWM strategies and indicators occurs `OnBarClose`. Please use the demonstrated method below to create your code logic inside these overrides.
+All historical and live execution of TWM strategies and indicators occurs `OnBarClose`. Please use the demonstrated method below to create your code logic inside these overrides. To adress current bar values please use the zero index as below. Previous bar index would be 1 in this case etc. Please note that if you address a bar that does not exist on the chart you will get an index out of range exception. For instance, if there are only 5 bars on the chart and you try and look back at Close[6] you will get an exception.
 
 ```js
 public override void OnBarUpdate()
 {
-    //write your business logic here
+    var close = Close[0];
+    var open = Open[0];
+    var high = High[0];
+    var low = Low[0];
+    var time = DateTime[0];
 }
 
 ```
@@ -129,11 +133,27 @@ public override void OnExecutionUpdate(Order order)
 
 It is possible to add an additional data series to indicator or strategy and work with that series. SymbolName string is optional, if nothing is passed the data series will be enabled on the same instrument.
 
+Symbol name should be specified exactly as it is listed in the instrument list. Please also specify the type as `SPOT` or `FUTURE`. The available connection short names are `BybitMainnet` and/or `BinanceMainnet`. You can add as many data serieses as you like.
 
 ```js
-AddDataSeries(DataSeriesType.Hour, 1, "SymbolName");
-
+AddDataSeries(DataSeriesType.Hour, 1,"DOGEUSDT", "FUTURE","BybitMainnet");
 ```
+
+To address data contained with the added data seriese pelase use the below syntax.
+
+```js
+public override void OnBarUpdate()
+{
+    Print("Close:" + Closes[1][0] + " Open: " + Opens[1][0] + " High: " + Highs[1][0] + " Low: "+ Lows[1][0] + " Time: " + DateTimes[1][0]);
+}
+```
+
+If you would like to submit a `LIVE` order against an added data series please use the selected bars in progress parameter available inside each order method. In the case below the order will be submitted to the first added extra series.
+
+```js
+_entryOrder = SubmitOrder(1, OrderAction.Buy, OrderType.Limit, PosSize,    price, 0,0, "", EnterLongName);
+```
+
 
 ### Comissions
 
