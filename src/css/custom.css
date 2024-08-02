@@ -30,3 +30,13 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .token-line {
   font-size: 0.8em;
 }
+
+.columns {
+  display: flex;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.column {
+  flex: 1;
+  padding: 10px; /* Adjust the padding as needed */
+}
